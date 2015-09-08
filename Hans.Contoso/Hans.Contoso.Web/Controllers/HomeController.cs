@@ -14,5 +14,10 @@ namespace Hans.Contoso.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Customer()
+        {
+            return View("~/Views/Customer/Index.cshtml");
+        }
     }
 }

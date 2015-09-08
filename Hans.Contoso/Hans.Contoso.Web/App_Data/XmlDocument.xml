@@ -516,8 +516,8 @@
             </summary>
             <param name="page">int</param>
             <param name="pageSize">int</param>
-            <param name="sort">string</param>
-            <param name="asc">true</param>
+            <param name="sortBy">string</param>
+            <param name="isAsc">true</param>
             <returns>List of customer with paging capability</returns>
         </member>
         <member name="M:Hans.Contoso.Web.Controllers.ValuesController.Get">

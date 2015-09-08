@@ -125,105 +125,105 @@ namespace Hans.Contoso.Web.Controllers
         /// </summary>
         /// <param name="page">int</param>
         /// <param name="pageSize">int</param>
-        /// <param name="sort">string</param>
-        /// <param name="asc">true</param>
+        /// <param name="sortBy">string</param>
+        /// <param name="isAsc">true</param>
         /// <returns>List of customer with paging capability</returns>
-        public async Task<IQueryable<CustomerModel>> GetAllBy(int page, int pageSize, string sort = "customerkey", bool asc = true)
+        public async Task<IQueryable<CustomerModel>> GetAllBy(int page, int pageSize, string sortBy, bool isAsc)
         {
-            var dimcutomers = await CustomerRepository.FindAllAsync();
+            var customers = await CustomerRepository.FindAllAsync();
 
-            switch (sort.ToLower())
+            switch (sortBy.ToLower())
             {
                 case "customerkey":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.CustomerKey) : dimcutomers.OrderByDescending(p => p.CustomerKey);
+                    customers = isAsc ? customers.OrderBy(p => p.CustomerKey) : customers.OrderByDescending(p => p.CustomerKey);
                     break;
                 case "geographykey":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Geography.GeographyKey) : dimcutomers.OrderByDescending(p => p.Geography.GeographyKey);
+                    customers = isAsc ? customers.OrderBy(p => p.Geography.GeographyKey) : customers.OrderByDescending(p => p.Geography.GeographyKey);
                     break;
                 case "customerlabel":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.CustomerLabel) : dimcutomers.OrderByDescending(p => p.CustomerLabel);
+                    customers = isAsc ? customers.OrderBy(p => p.CustomerLabel) : customers.OrderByDescending(p => p.CustomerLabel);
                     break;
                 case "title":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Title) : dimcutomers.OrderByDescending(p => p.Title);
+                    customers = isAsc ? customers.OrderBy(p => p.Title) : customers.OrderByDescending(p => p.Title);
                     break;
                 case "firstname":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.FirstName) : dimcutomers.OrderByDescending(p => p.FirstName);
+                    customers = isAsc ? customers.OrderBy(p => p.FirstName) : customers.OrderByDescending(p => p.FirstName);
                     break;
                 case "middlename":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.MiddleName) : dimcutomers.OrderByDescending(p => p.MiddleName);
+                    customers = isAsc ? customers.OrderBy(p => p.MiddleName) : customers.OrderByDescending(p => p.MiddleName);
                     break;
                 case "lastname":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.LastName) : dimcutomers.OrderByDescending(p => p.LastName);
+                    customers = isAsc ? customers.OrderBy(p => p.LastName) : customers.OrderByDescending(p => p.LastName);
                     break;
                 case "namestyle":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.NameStyle) : dimcutomers.OrderByDescending(p => p.NameStyle);
+                    customers = isAsc ? customers.OrderBy(p => p.NameStyle) : customers.OrderByDescending(p => p.NameStyle);
                     break;
                 case "birthdate":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.BirthDate) : dimcutomers.OrderByDescending(p => p.BirthDate);
+                    customers = isAsc ? customers.OrderBy(p => p.BirthDate) : customers.OrderByDescending(p => p.BirthDate);
                     break;
                 case "maritalstatus":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.MaritalStatus) : dimcutomers.OrderByDescending(p => p.MaritalStatus);
+                    customers = isAsc ? customers.OrderBy(p => p.MaritalStatus) : customers.OrderByDescending(p => p.MaritalStatus);
                     break;
                 case "suffix":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Suffix) : dimcutomers.OrderByDescending(p => p.Suffix);
+                    customers = isAsc ? customers.OrderBy(p => p.Suffix) : customers.OrderByDescending(p => p.Suffix);
                     break;
                 case "gender":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Gender) : dimcutomers.OrderByDescending(p => p.Gender);
+                    customers = isAsc ? customers.OrderBy(p => p.Gender) : customers.OrderByDescending(p => p.Gender);
                     break;
                 case "emailaddress":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.EmailAddress) : dimcutomers.OrderByDescending(p => p.EmailAddress);
+                    customers = isAsc ? customers.OrderBy(p => p.EmailAddress) : customers.OrderByDescending(p => p.EmailAddress);
                     break;
                 case "yearlyincome":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.YearlyIncome) : dimcutomers.OrderByDescending(p => p.YearlyIncome);
+                    customers = isAsc ? customers.OrderBy(p => p.YearlyIncome) : customers.OrderByDescending(p => p.YearlyIncome);
                     break;
                 case "totalchildren":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.TotalChildren) : dimcutomers.OrderByDescending(p => p.TotalChildren);
+                    customers = isAsc ? customers.OrderBy(p => p.TotalChildren) : customers.OrderByDescending(p => p.TotalChildren);
                     break;
                 case "numberchildrenathome":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.NumberChildrenAtHome) : dimcutomers.OrderByDescending(p => p.NumberChildrenAtHome);
+                    customers = isAsc ? customers.OrderBy(p => p.NumberChildrenAtHome) : customers.OrderByDescending(p => p.NumberChildrenAtHome);
                     break;
                 case "education":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Education) : dimcutomers.OrderByDescending(p => p.Education);
+                    customers = isAsc ? customers.OrderBy(p => p.Education) : customers.OrderByDescending(p => p.Education);
                     break;
                 case "occupation":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Occupation) : dimcutomers.OrderByDescending(p => p.Occupation);
+                    customers = isAsc ? customers.OrderBy(p => p.Occupation) : customers.OrderByDescending(p => p.Occupation);
                     break;
                 case "houseownerflag":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.HouseOwnerFlag) : dimcutomers.OrderByDescending(p => p.HouseOwnerFlag);
+                    customers = isAsc ? customers.OrderBy(p => p.HouseOwnerFlag) : customers.OrderByDescending(p => p.HouseOwnerFlag);
                     break;
                 case "numbercarsowned":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.NumberCarsOwned) : dimcutomers.OrderByDescending(p => p.NumberCarsOwned);
+                    customers = isAsc ? customers.OrderBy(p => p.NumberCarsOwned) : customers.OrderByDescending(p => p.NumberCarsOwned);
                     break;
                 case "addressline1":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.AddressLine1) : dimcutomers.OrderByDescending(p => p.AddressLine1);
+                    customers = isAsc ? customers.OrderBy(p => p.AddressLine1) : customers.OrderByDescending(p => p.AddressLine1);
                     break;
                 case "addressline2":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.AddressLine2) : dimcutomers.OrderByDescending(p => p.AddressLine2);
+                    customers = isAsc ? customers.OrderBy(p => p.AddressLine2) : customers.OrderByDescending(p => p.AddressLine2);
                     break;
                 case "phone":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.Phone) : dimcutomers.OrderByDescending(p => p.Phone);
+                    customers = isAsc ? customers.OrderBy(p => p.Phone) : customers.OrderByDescending(p => p.Phone);
                     break;
                 case "datefirstpurchase":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.DateFirstPurchase) : dimcutomers.OrderByDescending(p => p.DateFirstPurchase);
+                    customers = isAsc ? customers.OrderBy(p => p.DateFirstPurchase) : customers.OrderByDescending(p => p.DateFirstPurchase);
                     break;
                 case "customertype":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.CustomerType) : dimcutomers.OrderByDescending(p => p.CustomerType);
+                    customers = isAsc ? customers.OrderBy(p => p.CustomerType) : customers.OrderByDescending(p => p.CustomerType);
                     break;
                 case "companyname":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.CompanyName) : dimcutomers.OrderByDescending(p => p.CompanyName);
+                    customers = isAsc ? customers.OrderBy(p => p.CompanyName) : customers.OrderByDescending(p => p.CompanyName);
                     break;
                 case "etlloadid":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.ETLLoadID) : dimcutomers.OrderByDescending(p => p.ETLLoadID);
+                    customers = isAsc ? customers.OrderBy(p => p.ETLLoadID) : customers.OrderByDescending(p => p.ETLLoadID);
                     break;
                 case "loaddate":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.LoadDate) : dimcutomers.OrderByDescending(p => p.LoadDate);
+                    customers = isAsc ? customers.OrderBy(p => p.LoadDate) : customers.OrderByDescending(p => p.LoadDate);
                     break;
                 case "updatedate":
-                    dimcutomers = asc ? dimcutomers.OrderBy(p => p.UpdateDate) : dimcutomers.OrderByDescending(p => p.UpdateDate);
+                    customers = isAsc ? customers.OrderBy(p => p.UpdateDate) : customers.OrderByDescending(p => p.UpdateDate);
                     break;
             }
 
-            return dimcutomers.Select(x => new CustomerModel
+            return customers.Select(x => new CustomerModel
             {
                 CustomerKey = x.CustomerKey,
                 GeographyKey = x.Geography.GeographyKey,

@@ -1,0 +1,236 @@
+<script type="text/ng-template" id="detailsModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">@ViewBag.Title Details</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    CustomerLabel
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="CustomerLabel" ng-model="dimCutomer.CustomerLabel" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Title
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Title" ng-model="dimCutomer.Title" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    FirstName
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="FirstName" ng-model="dimCutomer.FirstName" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    MiddleName
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="MiddleName" ng-model="dimCutomer.MiddleName" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    LastName
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="LastName" ng-model="dimCutomer.LastName" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    NameStyle
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="NameStyle" ng-model="dimCutomer.NameStyle" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    BirthDate
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="BirthDate" ng-model="dimCutomer.BirthDate" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    MaritalStatus
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="MaritalStatus" ng-model="dimCutomer.MaritalStatus" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Suffix
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Suffix" ng-model="dimCutomer.Suffix" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Gender
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Gender" ng-model="dimCutomer.Gender" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    EmailAddress
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="EmailAddress" ng-model="dimCutomer.EmailAddress" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    YearlyIncome
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="YearlyIncome" ng-model="dimCutomer.YearlyIncome" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    TotalChildren
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="TotalChildren" ng-model="dimCutomer.TotalChildren" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    NumberChildrenAtHome
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="NumberChildrenAtHome" ng-model="dimCutomer.NumberChildrenAtHome" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Education
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Education" ng-model="dimCutomer.Education" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Occupation
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Occupation" ng-model="dimCutomer.Occupation" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    HouseOwnerFlag
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="HouseOwnerFlag" ng-model="dimCutomer.HouseOwnerFlag" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    NumberCarsOwned
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="NumberCarsOwned" ng-model="dimCutomer.NumberCarsOwned" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    AddressLine1
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="AddressLine1" ng-model="dimCutomer.AddressLine1" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    AddressLine2
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="AddressLine2" ng-model="dimCutomer.AddressLine2" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    Phone
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="Phone" ng-model="dimCutomer.Phone" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    DateFirstPurchase
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="DateFirstPurchase" ng-model="dimCutomer.DateFirstPurchase" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    CustomerType
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="CustomerType" ng-model="dimCutomer.CustomerType" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    CompanyName
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="CompanyName" ng-model="dimCutomer.CompanyName" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    ETLLoadID
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="ETLLoadID" ng-model="dimCutomer.ETLLoadID" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    LoadDate
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="LoadDate" ng-model="dimCutomer.LoadDate" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    UpdateDate
+                </div>
+                <div class="col-md-9">
+                    <input type="text" name="UpdateDate" ng-model="dimCutomer.UpdateDate" placeholder="" class="form-control input-sm" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 control-label">
+                    DimGeography
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" ng-model="dimCutomer.GeographyKey" ng-options="item.ID as item.Name for item in availableDimGeography">
+                </div>
+            </div>
+        </div>
+    </div>
+	   <div class="modal-footer">
+        <button class="btn btn-default btn-sm" ng-click="ok()">Cancel</button>
+    </div>
+</script>

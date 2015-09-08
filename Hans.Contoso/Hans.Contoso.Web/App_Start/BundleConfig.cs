@@ -20,8 +20,32 @@ namespace Hans.Contoso.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angulardev").Include(
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-route.js",
+                      "~/Scripts/angular-animate.js",
+                      "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.min.js",
+                      "~/Scripts/angular-route.min.js",
+                      "~/Scripts/angular-animate.min.js",
+                      "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
+                        "~/Scripts/angular-toastr.tpls.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/loadingbar").Include(
+                        "~/Scripts/loading-bar.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/App/app.js",
+                        "~/Scripts/App/customerController.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/angular-toastr.min.css",
+                      "~/Content/loading-bar.css",
                       "~/Content/site.css"));
         }
     }

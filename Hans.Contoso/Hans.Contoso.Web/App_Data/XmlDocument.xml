@@ -503,6 +503,23 @@
             </summary>
             <returns>List of all customers</returns>
         </member>
+        <member name="M:Hans.Contoso.Web.Controllers.CustomerController.GetAllBy(System.String)">
+            <summary>
+            Get all customer filter by search
+            </summary>
+            <param name="search">string</param>
+            <returns>List of customer</returns>
+        </member>
+        <member name="M:Hans.Contoso.Web.Controllers.CustomerController.GetAllBy(System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Get all customer with paging capability
+            </summary>
+            <param name="page">int</param>
+            <param name="pageSize">int</param>
+            <param name="sort">string</param>
+            <param name="asc">true</param>
+            <returns>List of customer with paging capability</returns>
+        </member>
         <member name="M:Hans.Contoso.Web.Controllers.ValuesController.Get">
             <summary>
             This is a test...

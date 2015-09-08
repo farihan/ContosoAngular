@@ -77,6 +77,50 @@ namespace Hans.Contoso.Web.Controllers
         }
 
         /// <summary>
+        /// Get all customer filter by search
+        /// </summary>
+        /// <param name="search">string</param>
+        /// <returns>List of customer</returns>
+        [HttpGet]
+        public async Task<IQueryable<CustomerModel>> GetAllBy(string search)
+        {
+            var list = await CustomerRepository.FindAllAsync();
+
+            return list.Select(x => new CustomerModel
+            {
+                CustomerKey = x.CustomerKey,
+                GeographyKey = x.Geography.GeographyKey,
+                CustomerLabel = x.CustomerLabel,
+                Title = x.Title,
+                FirstName = x.FirstName,
+                MiddleName = x.MiddleName,
+                LastName = x.LastName,
+                NameStyle = x.NameStyle.HasValue ? x.NameStyle.Value : false,
+                BirthDate = x.BirthDate.HasValue ? x.BirthDate.Value : DateTime.MinValue,
+                MaritalStatus = x.MaritalStatus,
+                Suffix = x.Suffix,
+                Gender = x.Gender,
+                EmailAddress = x.EmailAddress,
+                YearlyIncome = x.YearlyIncome.HasValue ? x.YearlyIncome.Value : decimal.MinValue,
+                TotalChildren = x.TotalChildren.HasValue ? x.TotalChildren.Value : int.MinValue,
+                NumberChildrenAtHome = x.NumberChildrenAtHome.HasValue ? x.NumberChildrenAtHome.Value : int.MinValue,
+                Education = x.Education,
+                Occupation = x.Occupation,
+                HouseOwnerFlag = x.HouseOwnerFlag,
+                NumberCarsOwned = x.NumberCarsOwned.HasValue ? x.NumberCarsOwned.Value : int.MinValue,
+                AddressLine1 = x.AddressLine1,
+                AddressLine2 = x.AddressLine2,
+                Phone = x.Phone,
+                DateFirstPurchase = x.DateFirstPurchase.HasValue ? x.DateFirstPurchase.Value : DateTime.MinValue,
+                CustomerType = x.CustomerType,
+                CompanyName = x.CompanyName,
+                ETLLoadID = x.ETLLoadID.HasValue ? x.ETLLoadID.Value : int.MinValue,
+                LoadDate = x.LoadDate.HasValue ? x.LoadDate.Value : DateTime.MinValue,
+                UpdateDate = x.UpdateDate.HasValue ? x.UpdateDate.Value : DateTime.MinValue
+            });
+        }
+
+        /// <summary>
         /// Get all customer with paging capability
         /// </summary>
         /// <param name="page">int</param>

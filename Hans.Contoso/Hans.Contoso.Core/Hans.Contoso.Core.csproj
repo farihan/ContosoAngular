@@ -63,7 +63,7 @@
     <Compile Include="Mappings\SalesTerritoryMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persistent\Repository.cs" />
-    <Compile Include="SessionManager.cs" />
+    <Compile Include="SessionFactoryPersistent.cs" />
     <Compile Include="Utils\Infrastructure.cs" />
   </ItemGroup>
   <ItemGroup />

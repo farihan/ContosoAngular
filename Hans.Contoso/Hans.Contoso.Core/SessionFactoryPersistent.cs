@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Hans.Contoso.Core
 {
-    public class SessionManager
+    public class SessionFactoryPersistent
     {
         public NHibernate.ISessionFactory Initialize()
         {

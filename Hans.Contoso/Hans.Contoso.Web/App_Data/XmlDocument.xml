@@ -481,6 +481,28 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Hans.Contoso.Web.Controllers.CustomerController">
+            <summary>
+            Customer API
+            </summary>
+        </member>
+        <member name="P:Hans.Contoso.Web.Controllers.CustomerController.CustomerRepository">
+            <summary>
+            Customer repository
+            </summary>
+        </member>
+        <member name="M:Hans.Contoso.Web.Controllers.CustomerController.GetSize">
+            <summary>
+            Get customer count
+            </summary>
+            <returns>Count of all customers</returns>
+        </member>
+        <member name="M:Hans.Contoso.Web.Controllers.CustomerController.GetAll">
+            <summary>
+            Get all customers
+            </summary>
+            <returns>List of all customers</returns>
+        </member>
         <member name="M:Hans.Contoso.Web.Controllers.ValuesController.Get">
             <summary>
             This is a test...
@@ -493,6 +515,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="T:Hans.Contoso.Web.Models.CustomerModel">
+            <summary>
+            Customer model
+            </summary>
+        </member>
+        <member name="M:Hans.Contoso.Web.Models.CustomerModel.#ctor">
+            <summary>
+            Customer model constructor
+            </summary>
         </member>
     </members>
 </doc>

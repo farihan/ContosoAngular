@@ -3,9 +3,9 @@ using FluentNHibernate.Cfg.Db;
 using Hans.MvcKnockout.Core.Commons;
 using System.Reflection;
 
-namespace Hans.Contoso.Core
+namespace Hans.Contoso.Core.Persistence
 {
-    public class SessionFactoryPersistent
+    public class PersistentConfiguration
     {
         public NHibernate.ISessionFactory Initialize()
         {

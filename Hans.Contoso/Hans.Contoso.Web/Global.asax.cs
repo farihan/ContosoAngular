@@ -33,7 +33,7 @@ namespace Hans.Contoso.Web
             var builder = new ContainerBuilder();
 
             // register ISessionFactory as Singleton 
-            builder.Register(x => new SessionFactoryPersistent().Initialize()).SingleInstance();
+            builder.Register(x => new PersistentConfiguration().Initialize()).SingleInstance();
             // register ISession as instance per web request
             builder.Register(x => x.Resolve<ISessionFactory>().OpenSession()).InstancePerRequest();
             // register controllers
